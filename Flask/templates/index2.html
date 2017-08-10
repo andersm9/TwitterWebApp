@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Twitter Sentiment Analysis</title>
+<style>
+	
+html {
+	background-color:#F7F7F7;
+
+}
+h1 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 32px;
+	margin: 45px;
+	width: 90%;
+	text-align: center;
+	color: #143109;
+}
+
+h2 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 24px;
+	margin: 45px;
+	width: 90%;
+	text-align: center;
+	color: #143109;
+}
+
+#box-table-a
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	margin: 45px;
+	width: 90%;
+	text-align: left;
+	border-collapse: collapse;
+}
+#box-table-a th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #AAAE7F;
+	border-top: 4px solid #aabcfe;
+	border-bottom: 1px solid #fff;
+	color: #143109;
+}
+#box-table-a td
+{
+	padding: 8px;
+	background: #D0D6B3; 
+	border-bottom: 1px solid #fff;
+	color: #143109;
+	border-top: 1px solid transparent;
+}
+#box-table-a tr:hover td
+{
+	background: #EFEFEF;
+	color: #143109;
+}
+
+
+</style>
+
+</head>
+<body>
+	
+	
+	
+<p>                     </p>
+<h1> Twitter Sentiment Survey tool </h1>
+<h2> These are the top 10 results of the highest magnitude in the database</h2>
+<p>                     </p>
+      
+
+
+<div> </div>
+
+
+
+<table id="box-table-a" summary="Employee Pay Sheet">
+    <thead>
+    	<tr>
+        	<th scope="col">Tweet</th>
+            <th scope="col">Polarity</th>
+            <th scope="col">Magnitude</th>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+		{% for p in tDict %}
+        <tr>
+        	<td>{{p['TWEET']}}</td>
+			<td>{{p['POLARITY']}}</td>
+			<td>{{p['MAGNITUDE']}}</td>
+			<td>{{p['NAME']}}</td>
+        </tr>
+		{% endfor %}
+    </tbody>	
+	
+</table>
+
+
+
+</body>
+</html>
