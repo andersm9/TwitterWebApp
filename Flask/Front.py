@@ -41,5 +41,5 @@ def main():
     #print((result))
     return render_template('index2.html', tDict = result)
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
     
