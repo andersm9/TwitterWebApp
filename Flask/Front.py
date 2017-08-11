@@ -3,7 +3,6 @@
 
 from flask import Flask, render_template, request, json, Response
 from flask_mysqldb import MySQL
-import MySQLdb
 import pymysql.cursors
 
 app = Flask(__name__)

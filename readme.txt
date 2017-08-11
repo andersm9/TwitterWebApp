@@ -16,6 +16,7 @@ This project is split into 2 parts
 This was developed using:
 
     Debian Jessie
+    PyMySQL
     Python 3.4.2
     Flask 0.12.2
     MySQL Ver 14.14 Distrib 5.5.55
