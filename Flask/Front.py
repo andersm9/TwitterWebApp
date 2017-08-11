@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, json, Response
 import pymysql.cursors
 
 app = Flask(__name__)
-mysql = MySQL(app)
+#mysql = MySQL(app)
 # MySQL configurations
 #app.config['MYSQL_DATABASE_USER'] = 'root'
 #app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
