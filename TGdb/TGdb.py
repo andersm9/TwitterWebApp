@@ -20,7 +20,7 @@ api = TwitterAPI(CONSUMER_KEY,
 ## google credentials
 ## requires env variable to be set as follows. this doesn't seem to work - need to manually execute the command::
 #in  Dedian Dev: subprocess.Popen('export GOOGLE_APPLICATION_CREDENTIALS=/home/mark/Projects/Google/MAProject-5da8c0e41664.json', shell=True)
-#in Production Ubuntu: export GOOGLE_APPLICATION_CREDENTIALS=/home/ubuntu/WebApp/TwitterWebApp/MAProject-5da8c0e41664.json
+#in Production Ubuntu: export GOOGLE_APPLICATION_CREDENTIALS=/home/ubuntu/Google/MAProject-5da8c0e41664.json
 from googleapiclient import discovery
 import httplib2
 from oauth2client.client import GoogleCredentials
