@@ -3,6 +3,7 @@ import subprocess
 import requests
 import pymysql.cursors
 
+
 ## twitter credentials
 from TwitterAPI import TwitterAPI
 ACCESS_TOKEN_KEY = '493261235-o8QpxdHWHF9bjSklQDkHzybwIpQSfeWfFYu2Teuk'
