@@ -1,0 +1,83 @@
+Twitter 1 - try to connect
+connected, awaiting tweet
+new tweet 
+Design Lead
+Design Lead - Edinburgh - 6 Month Contract
+
+Our Banking client is offering an exciting opp...https://t.co/ceOnc5ApyD
+not viable location
+---------------------------------------
+new tweet 
+RT @TribePorty: Table 1 started. See what you can make @TribePorty @earthyfoods with @edintoollibrary @portyonline #WhatsOn… 
+not viable location
+---------------------------------------
+new tweet 
+RT @leomiklasz: This &amp; a spate of Visa denials for Arab Arts Focus does make me suspicious there is an unpublicised Trump-esque Mid… 
+location = East Kilbride, United Kingdom
+coordinates = 
+55.76435240000001
+-4.1769987
+username = 
+sabele
+Google 2 -Exit Sentiment: polarity of 1 with magnitude of 0
+DB Write complete
+------------------------------------------------------
+new tweet 
+DT Jess Phillips: If your in Edinburgh and fancy coming to chat I'll be Edinburgh Book Fest here... https://t.co/lNSdWkwy2f
+location = UK
+coordinates = 
+55.378051
+-3.435973
+username = 
+Tweets MPs Delete
+Google 2 -Exit Sentiment: polarity of 1 with magnitude of 0.2
+DB Write complete
+------------------------------------------------------
+new tweet 
+If you're in Edinburgh and fancy coming to chat I'll be @edbookfest here's my event https://t.co/CamwdXGAMT
+location = Birmingham, England
+coordinates = 
+52.48624299999999
+-1.890401
+outside required location - break-----------------------
+new tweet 
+RT @jessphillips: If you're in Edinburgh and fancy coming to chat I'll be @edbookfest here's my event https://t.co/CamwdXGAMT
+not viable location
+---------------------------------------
+new tweet 
+I'll say this for Alan Ayckbourn: He's gives good name game. Gonna call my first born Walby Tibbifer. https://t.co/UDxAuRkggk
+location = London
+coordinates = 
+51.5073509
+-0.1277583
+outside required location - break-----------------------
+new tweet 
+RT @markthomasinfo: Need a hand selling out the Grenfell benefit in Edinburgh. RT's would be appreciated. https://t.co/PaR5lJHAIN
+not viable location
+---------------------------------------
+new tweet 
+RT @MonkeyWithCymb: If you happen to be in Edinburgh this weekend there are 2 performances of our show 'The Masks of Aphra Behn'...... http…
+not viable location
+---------------------------------------
+new tweet 
+RT @jessphillips: If you're in Edinburgh and fancy coming to chat I'll be @edbookfest here's my event https://t.co/CamwdXGAMT
+location = Hammersmith & Fulham, London
+coordinates = 
+51.49901699999999
+-0.2291497
+outside required location - break-----------------------
+new tweet 
+RT @officialdafc: Defender, Stuart Morrison has today joined Edinburgh City (@EdinburghCityFC) on a Development Loan until 8 January… 
+location = North queensferry
+not viable location
+---------------------------------------
+new tweet 
+RT @jupitusphillip: EDINBURGH SKETCHERS! It's a dreich one today, so come sit in the dry and draw Clare with me! #SketchComic… 
+location = Edinburgh
+not viable location
+---------------------------------------
+new tweet 
+RT @louisecoatz: Mighty flighty @TheTrevorLock is at the Edinburgh Free Fringe. Deeply funny man. Deeply free man.  https://t.co/plid7StOAr
+location = Lancaster, Ohio
+not viable location
+---------------------------------------
