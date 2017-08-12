@@ -17,7 +17,7 @@ api = TwitterAPI(CONSUMER_KEY,
 
 ## google credentials
 ## requires env variable to be set as follows.
-##set in /etc/profile line at the bottom e.g.:
+##set in /etc/profile (and/or /etc/environment) line at the bottom e.g.:
 #export GOOGLE_APPLICATION_CREDENTIALS=/home/mark/Projects/Google/MAProject-5da8c0e41664.json
 #in  Debian Dev GOOGLE_APPLICATION_CREDENTIALS=/home/mark/Projects/Google/MAProject-5da8c0e41664.json'
 #in Production Ubuntu:GOOGLE_APPLICATION_CREDENTIALS=/home/ubuntu/Google/MAProject-5da8c0e41664.json
