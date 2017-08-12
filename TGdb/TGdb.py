@@ -1,8 +1,6 @@
 import time
-import subprocess
 import requests
 import pymysql.cursors
-##wee test
 
 ## twitter credentials
 from TwitterAPI import TwitterAPI
@@ -19,7 +17,7 @@ api = TwitterAPI(CONSUMER_KEY,
 
 ## google credentials
 ## requires env variable to be set as follows. this doesn't seem to work - need to manually execute the command::
-#in  Dedian Dev: subprocess.Popen('export GOOGLE_APPLICATION_CREDENTIALS=/home/mark/Projects/Google/MAProject-5da8c0e41664.json', shell=True)
+#in  Debian Dev: subprocess.Popen('export GOOGLE_APPLICATION_CREDENTIALS=/home/mark/Projects/Google/MAProject-5da8c0e41664.json', shell=True)
 #in Production Ubuntu: export GOOGLE_APPLICATION_CREDENTIALS=/home/ubuntu/Google/MAProject-5da8c0e41664.json
 from googleapiclient import discovery
 import httplib2
@@ -118,7 +116,7 @@ def Database_write2(tweet,polarity,magnitude, lat, long, user_name):
 ## start here
 
 if __name__ == "__main__":
-    TRACK_TERM = 'Virgin Media Business, VMB'
+    TRACK_TERM = 'Edinburgh'
     print("Twitter 1 - try to connect")
     r = api.request('statuses/filter', {'track': TRACK_TERM})
     print("connected, awaiting tweet")
