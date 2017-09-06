@@ -50,6 +50,14 @@ sudo su
 cd to TwitterWebApp
 git pull origin master
 
-Background process starting:
+Screen commands:
 
 screen -d -m <command>
+screen -ls //see what processes are running
+screen -X -S <ID> quit //kill process
+
+DB
+
+mysql -u root -p  /login
+use WebAll
+select * from Gitter
