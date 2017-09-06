@@ -38,6 +38,14 @@ This was developed using:
 You'll need Twitter and Google accounts with the relevant credentials to access the Twitter Streaming API and Google Sentiment Analysis and Geocoding APIs. All are free within certain limitations.
 Git commands:
 
+Source:
+
 git add .
 git add -m "comments"
 git push origin master
+
+AWS:
+
+sudo su
+cd to TwitterWebApp
+git pull origin master
