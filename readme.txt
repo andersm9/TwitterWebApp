@@ -49,3 +49,7 @@ AWS:
 sudo su
 cd to TwitterWebApp
 git pull origin master
+
+Background process starting:
+
+screen -d -m <command>
