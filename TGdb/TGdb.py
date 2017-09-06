@@ -80,15 +80,21 @@ def google_sentiment(text):
 
 ### Check location of tweet. These latitude and Longitude roughly equate to Scotland
 
-def LocCck(lat,long):
-    ##Scotland :
+def SCOT_LocCck(lat,long):
+
     if ((lat>55 and lat<61) and (long<-1.1 and long>-6.5)):
     #anywhere:
     #if ((lat>-200 and lat<200) and (long<200 and long>-200)):
         return True
     else:
         return False
-    
+def UK_LocCck(lat,long):
+
+    if ((lat>51 and lat<61) and (long<1.3 and long>-6.5)):
+
+        return True
+    else:
+        return False 
 ### Twitter function. Obtains tweet details in a DICT with TRACK_TERM
 ### sends the text of the tweets to the google api function "main"
 
@@ -142,9 +148,10 @@ if __name__ == "__main__":
                 lat = user_coord[0]
                 long = user_coord[1]
                 #send the co-ords to check if they fit a predefined region
-                Location_Check = LocCck(lat,long)
+                #Location_Check = SCOT_LocCck(lat,long)
+                Location_Check = UK_LocCck(lat,long)
                 #If the co-ords are within the predefined range, if so, normalise, guage sentiment and  and save to MySQL db
-                if Location_Check==True:                   
+                if Location_Check==True:
                     print("username = ")
                     print(user['name'])
                     #check encoding is correct
