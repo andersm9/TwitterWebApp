@@ -59,5 +59,6 @@ screen -X -S <ID> quit //kill process
 DB
 
 mysql -u root -p  /login
-use WebAll
-select * from Gitter
+use WebApp
+select * from Gitter;
+truncate table Gitter;

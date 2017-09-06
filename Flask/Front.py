@@ -21,6 +21,7 @@ connection = pymysql.connect(host='localhost',
                              password='root',
                              db='WebApp',
                              charset='utf8mb4',
+                             autocommit=True,
                              cursorclass=pymysql.cursors.DictCursor)
 @app.route("/")
 def main():
