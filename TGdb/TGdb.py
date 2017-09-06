@@ -120,7 +120,7 @@ def Database_write2(tweet,polarity,magnitude, lat, long, user_name):
 ## start here
 
 if __name__ == "__main__":
-    TRACK_TERM = 'pizza'
+    TRACK_TERM = 'glasgow'
     print("Twitter 1 - try to connect")
     r = api.request('statuses/filter', {'track': TRACK_TERM})
     print("connected, awaiting tweet")
