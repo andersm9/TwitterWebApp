@@ -1,0 +1,204 @@
+INFO:root:Twitter - awaiting connection
+INFO:root:Connected, awaiting tweet
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:RT @CPGlasgowBranch: LOST. Help! Ginger &amp; white male cat is missing from the Govanhill area of Glasgow.Details on… 
+INFO:root:location = Scotland
+INFO:root:coordinates = 56.49067119999999 -4.2026458
+INFO:root:username = Sound Thief
+INFO:root:Exit Sentiment: polarity of 0 with magnitude of 0.400000 
+INFO:root:DB Write Complete
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:Please recycle your printer cartridges in aid of cats protection Glasgow. They get money for your cartridge donatio… https://t.co/RsuQGuG488
+INFO:root:location = Coleraine, Northern Ireland
+INFO:root:coordinates = 55.1325802 -6.664610300000001
+INFO:root:outside required location
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:RT @IkerCasillas: Glasgow!! Of course!! 😰 https://t.co/K0yXLLKUwj
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 161, in <module>
+    logging.info("location = " + user['location'])
+TypeError: Can't convert 'NoneType' object to str implicitly
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:Horror crash on busy road through Glasgow sees child rushed to hospital – Scottish Daily Record https://t.co/j9fPdbC8eR
+INFO:root:location = United Kingdom
+INFO:root:coordinates = 55.378051 -3.435973
+INFO:root:username = uklocal
+INFO:root:Exit Sentiment: polarity of -1 with magnitude of 0.300000 
+INFO:root:DB Write Complete
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:@Enichan you should see the one I already built that runs from Glasgow to Reykjavik
+INFO:root:location = supervinh47@gmail.com
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 164, in <module>
+    user_coord = google_geo(user['location'])
+  File "TGdb.py", line 58, in google_geo
+    result = res['results'][0]
+IndexError: list index out of range
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:@Montague90 Just imagine how much better it will be when you move to Glasgow.
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 161, in <module>
+    logging.info("location = " + user['location'])
+TypeError: Can't convert 'NoneType' object to str implicitly
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:@FamiliesGlasgow #JackJillMarket back at Glasgow South SAT07OCT #BellahoustonSportsCentre #savvyshopping… https://t.co/DMlxUDW3Dz
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 161, in <module>
+    logging.info("location = " + user['location'])
+TypeError: Can't convert 'NoneType' object to str implicitly
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:RT @74frankfurt: Duke Street Prison, Glasgow. (1798 - 1955) https://t.co/myMlxriC2k
+INFO:root:location = Worldwideweb via scotland
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 164, in <module>
+    user_coord = google_geo(user['location'])
+  File "TGdb.py", line 58, in google_geo
+    result = res['results'][0]
+IndexError: list index out of range
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:RT @IkerCasillas: Glasgow!! Of course!! 😰 https://t.co/K0yXLLKUwj
+INFO:root:location = Ávila
+INFO:root:coordinates = 40.656685 -4.6812086
+INFO:root:outside required location
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:YESSS GLASGOW! 😍😍😍 https://t.co/eauHIHkwQf
+INFO:root:location = London
+INFO:root:coordinates = 51.5073509 -0.1277583
+INFO:root:username = Sukh Ojla
+INFO:root:Exit Sentiment: polarity of 0 with magnitude of 0.100000 
+INFO:root:DB Write Complete
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:Haha yes, I'll be there sooooon! https://t.co/mfdMGJZwg7
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 161, in <module>
+    logging.info("location = " + user['location'])
+TypeError: Can't convert 'NoneType' object to str implicitly
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:RT @waitey: Glasgow School of Art unveils full-size prototype of Mack library rebuild https://t.co/1Iz321XHtP
+INFO:root:location = London
+INFO:root:coordinates = 51.5073509 -0.1277583
+INFO:root:username = PETERKENTINFORMATION
+INFO:root:Exit Sentiment: polarity of -1 with magnitude of 0.000000 
+INFO:root:DB Write Complete
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:@easyJet any chance of some help with flights from Glasgow to London for 3 deaflympians on a mission for deaf awareness
+INFO:root:location = Cumbria UK
+INFO:root:coordinates = 54.5772323 -2.7974835
+INFO:root:username = Bethan Lishman
+INFO:root:Exit Sentiment: polarity of 1 with magnitude of 0.400000 
+INFO:root:DB Write Complete
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:Glasgow bar to be transformed into Harry Potter spectacle - what we know so far https://t.co/MmyVvhXjUN https://t.co/PNgfw7qH3p
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 161, in <module>
+    logging.info("location = " + user['location'])
+TypeError: Can't convert 'NoneType' object to str implicitly
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:Glasgow pub to host a morning with Disney's Moana  https://t.co/yOoSNcgpDU
+INFO:root:location = Glasgow
+INFO:root:coordinates = 55.864237 -4.251806
+INFO:root:username = The Evening Times
+INFO:root:Exit Sentiment: polarity of -1 with magnitude of 0.100000 
+INFO:root:DB Write Complete
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:My colleague with another of her great photographs. https://t.co/NyOF3rq78R
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 161, in <module>
+    logging.info("location = " + user['location'])
+TypeError: Can't convert 'NoneType' object to str implicitly
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:Adult and child rushed to hospital after being hit by a car on busy Argyle Street https://t.co/sIPqHUNOG2
+INFO:root:location = Glasgow
+INFO:root:coordinates = 55.864237 -4.251806
+INFO:root:username = Glasgow Live
+INFO:root:Exit Sentiment: polarity of -1 with magnitude of 0.700000 
+INFO:root:DB Write Complete
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:#NowPlaying The Man I Love - CWS (Glasgow) Band
+~ https://t.co/tnbSVSXCU7
+https://t.co/D7Gas3IMv2
+
+#brassbandradio #brassband
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 161, in <module>
+    logging.info("location = " + user['location'])
+TypeError: Can't convert 'NoneType' object to str implicitly
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:Glasgow, Manchester and Birmingham !!!!!! 🖤🖤🖤 https://t.co/cONs9kMknF
+INFO:root:location = Manchester
+INFO:root:coordinates = 53.4807593 -2.2426305
+INFO:root:username = becky
+INFO:root:Exit Sentiment: polarity of -1 with magnitude of 0.000000 
+INFO:root:DB Write Complete
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:#Glasgow drizzle starting in 50 min 12°c with broken clouds, you can expect light rain tomorrow afternoon and evening #MyWeather
+INFO:root:location = Glasgow, Scotland
+INFO:root:coordinates = 55.864237 -4.251806
+INFO:root:username = ☁️ Glasgow Weather
+INFO:root:Exit Sentiment: polarity of -1 with magnitude of 0.200000 
+INFO:root:DB Write Complete
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:RT @celticfc: ⚽️⚽️⚽️
+
+A year to the day since French Bhoy @MDembele_10 bagged a Glasgow Derby hat-trick! 🔥🇫🇷 https://t.co/zLHfYbjYKy
+INFO:root:location = Glasgow, Scotland
+INFO:root:coordinates = 55.864237 -4.251806
+INFO:root:username = Paul Mclean ☘️☘️
+INFO:root:Exit Sentiment: polarity of 0 with magnitude of 0.000000 
+INFO:root:DB Write Complete
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:RT @marionmckinne16: Car Hire Glasgow Airport  - Hertz Car Rental https://t.co/HDJR9RmHu0
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 161, in <module>
+    logging.info("location = " + user['location'])
+TypeError: Can't convert 'NoneType' object to str implicitly
+INFO:root:New tweet
+INFO:root:------------------------------------
+INFO:root:RT @IkerCasillas: Glasgow!! Of course!! 😰 https://t.co/K0yXLLKUwj
+ERROR:root:not viable location
+Traceback (most recent call last):
+  File "TGdb.py", line 161, in <module>
+    logging.info("location = " + user['location'])
+TypeError: Can't convert 'NoneType' object to str implicitly

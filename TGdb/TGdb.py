@@ -3,6 +3,8 @@
 import time
 import requests
 import pymysql.cursors
+import logging
+logging.basicConfig(filename='example.log',level=logging.INFO)
 
 ## twitter credentials
 from TwitterAPI import TwitterAPI
@@ -26,6 +28,14 @@ api = TwitterAPI(CONSUMER_KEY,
 from googleapiclient import discovery
 import httplib2
 from oauth2client.client import GoogleCredentials
+#set loggin levels high in modules - stops the log being flooded (particularly from google oauth2client)
+logging.getLogger("requests").setLevel(logging.ERROR)
+logging.getLogger("googleapiclient").setLevel(logging.ERROR)
+logging.getLogger("oauth2client.client").setLevel(logging.ERROR)
+logging.getLogger("oauth2client").setLevel(logging.ERROR)
+logging.getLogger("GoogleCredentials").setLevel(logging.ERROR)
+logging.getLogger("discovery").setLevel(logging.ERROR)
+logging.getLogger("httplib2").setLevel(logging.ERROR)
 
 def google_geo(location):
     # Using Python requests and the Google Maps Geocoding API.
@@ -74,7 +84,7 @@ def google_sentiment(text):
  response = service_request.execute()
  polarity = response['documentSentiment']['polarity']
  magnitude = response['documentSentiment']['magnitude']
- print('Google 2 -Exit Sentiment: polarity of %s with magnitude of %s' % (polarity, magnitude))
+ logging.info('Exit Sentiment: polarity of %d with magnitude of %f ' % (polarity, magnitude))
  return (polarity, magnitude)
 
 
@@ -116,32 +126,43 @@ def Database_write2(tweet,polarity,magnitude, lat, long, user_name):
             cursor.execute(sql)
             # Commit your changes in the database
             connection.commit()
+            logging.info('DB Write Complete')
             print("DB Write complete")
         except:
             # Rollback in case there is any error
             connection.rollback()
+            #logging.warning('DB Write FAILURE')
+            logging.exception("DB Write Failure")
+            
             print("FAIL!!!!!    XXXXXXXXXXX        DB Write X - exception")
             return 
     connection.close()
 ## start here
 
 if __name__ == "__main__":
-    TRACK_TERM = 'virgin media business, VMB'
+    TRACK_TERM = 'glasgow'
+    logging.info('Twitter - awaiting connection')
     print("Twitter 1 - try to connect")
     r = api.request('statuses/filter', {'track': TRACK_TERM})
+    logging.info('Connected, awaiting tweet')
     print("connected, awaiting tweet")
     for item in r:
+        logging.info('New tweet')
+        logging.info('------------------------------------')
         print("new tweet ")
         #check language is english (some languages not supported by google sentiment API)
         if item['lang']=='en':
             user = item['user']
             try:
                 #this will print out the tweet text:
+                logging.info(item['text'])
                 print(item['text'] if 'text' in item else item)
                 #Prints out the users self defined location. Seems to e the most reliably filled fielf, though it's sometimes nonsence e.g. "The Moon" etc
+                logging.info("location = " + user['location'])
                 print("location = " + user['location'])
                 #Attempts to convert the user location to latitude and longitude
                 user_coord = google_geo(user['location'])
+                logging.info('coordinates = %s %s' %(user_coord[0],user_coord[1]))
                 print("coordinates = ")
                 print(user_coord[0])
                 print(user_coord[1])
@@ -152,6 +173,7 @@ if __name__ == "__main__":
                 Location_Check = UK_LocCck(lat,long)
                 #If the co-ords are within the predefined range, if so, normalise, guage sentiment and  and save to MySQL db
                 if Location_Check==True:
+                    logging.info('username = %s' %(user['name']))
                     print("username = ")
                     print(user['name'])
                     #check encoding is correct
@@ -168,12 +190,17 @@ if __name__ == "__main__":
                     Database_write2(tweet4, polarity, magnitude, lat, long, user['name']);
                     print("------------------------------------------------------")
                 else:
+                    logging.info('outside required location')
                     print("outside required location - break-----------------------")           
             except:
+                logging.exception("not viable location")
+                #logging.info('not viable location')
                 print("not viable location")
                 print("---------------------------------------")
         else:
-            print("language not English------------------------------------")
+            logging.exception("language not english exception")
+            #logging.info('language not english')
+            print("language not English print------------------------------------")
 
 
     

@@ -41,7 +41,7 @@ Git commands:
 Source:
 
 git add .
-git add -m "comments"
+git commit -m "comments"
 git push origin master
 
 AWS:
