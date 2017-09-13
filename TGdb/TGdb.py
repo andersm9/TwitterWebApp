@@ -140,7 +140,7 @@ def Database_write2(tweet,polarity,magnitude, lat, long, user_name):
 ## start here
 
 if __name__ == "__main__":
-    TRACK_TERM = 'virgin media business, vmb'
+    TRACK_TERM = 'glasgow'
     logging.info('Twitter - awaiting connection')
     print("Twitter 1 - try to connect")
     r = api.request('statuses/filter', {'track': TRACK_TERM})
@@ -179,7 +179,7 @@ if __name__ == "__main__":
                     #check encoding is correct
                     tweet = item['text']
                     tweet2 = tweet.encode('utf-8')
-                    tweet3=str(tweet2)
+                    tweet3=str(tweet)
                     #remove key character " ' "
                     tweet4 = (tweet3.replace("'" , "" , 20))
                     #send tweet to google sentiment analysis
