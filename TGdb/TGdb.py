@@ -4,7 +4,7 @@ import time
 import requests
 import pymysql.cursors
 import logging
-logging.basicConfig(filename='example.log',level=logging.INFO)
+logging.basicConfig(filename='example.log',level=logging.WARNING)
 
 ## twitter credentials
 from TwitterAPI import TwitterAPI
