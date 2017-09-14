@@ -31,7 +31,7 @@ def main():
     try:
         with connection.cursor() as cursor:
     # Read a single record
-            sql = "SELECT TWEET, POLARITY, MAGNITUDE, LATITUDE, LONGITUDE, NAME FROM Gitter ORDER BY MAGNITUDE DESC LIMIT 10"
+            sql = "SELECT TWEET, POLARITY, MAGNITUDE, LATITUDE, LONGITUDE, NAME FROM Gitter ORDER BY MAGNITUDE DESC LIMIT 30"
             cursor.execute(sql)
             result = cursor.fetchall()
             print (type(result))
