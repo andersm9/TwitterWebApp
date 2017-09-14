@@ -3,6 +3,8 @@
 
 from flask import Flask, render_template, request, json, Response
 import pymysql.cursors
+import logging
+logging.basicConfig(filename='Front.log',level=logging.WARNING)
 
 app = Flask(__name__)
 #mysql = MySQL(app)
@@ -25,14 +27,15 @@ connection = pymysql.connect(host='localhost',
                              cursorclass=pymysql.cursors.DictCursor)
 @app.route("/")
 def main():
-##pyMySQL    
-    with connection.cursor() as cursor:
+##pyMySQL
+    try:
+        with connection.cursor() as cursor:
     # Read a single record
-        sql = "SELECT TWEET, POLARITY, MAGNITUDE, LATITUDE, LONGITUDE, NAME FROM Gitter ORDER BY MAGNITUDE DESC LIMIT 10"
-        cursor.execute(sql)
-        result = cursor.fetchall()
-        print (type(result))
-        print (result)
+            sql = "SELECT TWEET, POLARITY, MAGNITUDE, LATITUDE, LONGITUDE, NAME FROM Gitter ORDER BY MAGNITUDE DESC LIMIT 10"
+            cursor.execute(sql)
+            result = cursor.fetchall()
+            print (type(result))
+            print (result)
         #print ("   ")
     
 #MySQL    
@@ -40,7 +43,11 @@ def main():
     #cursor.execute("SELECT TWEET, POLARITY, MAGNITUDE, LATITUDE, LONGITUDE, NAME FROM Gitter ORDER BY MAGNITUDE DESC LIMIT 2")
     #result = cursor.fetchall()
     #print((result))
-    return render_template('index2.html', tDict = result)
+        return render_template('index2.html', tDict = result)
+    except:
+        logging.exception("Webserver Fail") 
+        print("Webserver Fail")
+        
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
     
