@@ -47,6 +47,7 @@ def main():
     except:
         logging.exception("Webserver Fail") 
         print("Webserver Fail")
+        return ("Web Failure")
         
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
