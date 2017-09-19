@@ -34,6 +34,7 @@ def main():
             sql = "SELECT TWEET, POLARITY, MAGNITUDE, LATITUDE, LONGITUDE, NAME FROM Gitter ORDER BY MAGNITUDE DESC LIMIT 30"
             cursor.execute(sql)
             result = cursor.fetchall()
+            cursor.close()
             print (type(result))
             print (result)
         #print ("   ")
