@@ -24,7 +24,8 @@ connection = pymysql.connect(host='localhost',
                              db='WebApp',
                              charset='utf8mb4',
                              autocommit=True,
-                             cursorclass=pymysql.cursors.DictCursor)
+                             cursorclass=pymysql.cursors.DictCursor,
+                             connect_timeout=288000)
 @app.route("/")
 def main():
 ##pyMySQL
