@@ -28,13 +28,22 @@ connection = pymysql.connect(host='localhost',
                              connect_timeout=288000)
 @app.route("/")
 def main():
-##pyMySQL
+    #set long timeouts on SQL
+    with connection.cursor() as cursor:
+        sql1 = "SET SESSION wait_timeout = 999999"
+        cursor.execute(sql1)
+        sql2 = "SET SESSION interactive_timeout = 999999"
+        cursor.execute(sql2)
+        cursor.close()       
     try:
         with connection.cursor() as cursor:
     # Read a single record
             sql = "SELECT TWEET, POLARITY, MAGNITUDE, LATITUDE, LONGITUDE, NAME FROM Gitter ORDER BY MAGNITUDE DESC LIMIT 30"
             cursor.execute(sql)
             result = cursor.fetchall()
+            #sql3 = "SHOW VARIABLES LIKE 'interactive_timeout'"
+            #cursor.execute(sql3)
+            #result = cursor.fetchall()
             cursor.close()
             print (type(result))
             print (result)
